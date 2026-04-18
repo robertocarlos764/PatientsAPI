@@ -1,0 +1,49 @@
+<div style="padding: 20px; max-width: 500px;">
+  <h2>{{ isEdit ? 'Editar' : 'Crear' }} Paciente</h2>
+
+  @if (errorMessage) {
+    <div style="color: red; margin-bottom: 10px;">{{errorMessage}}</div>
+  }
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <label>Tipo de Documento *
+      <select [(ngModel)]="patient.documentType" style="width: 100%; padding: 8px;">
+        <option value="CC">CC</option>
+        <option value="TI">TI</option>
+        <option value="CE">CE</option>
+        <option value="PA">PA</option>
+      </select>
+    </label>
+
+    <label>Número de Documento *
+      <input [(ngModel)]="patient.documentNumber" style="width: 100%; padding: 8px;" />
+    </label>
+
+    <label>Nombre *
+      <input [(ngModel)]="patient.firstName" style="width: 100%; padding: 8px;" />
+    </label>
+
+    <label>Apellido *
+      <input [(ngModel)]="patient.lastName" style="width: 100%; padding: 8px;" />
+    </label>
+
+    <label>Fecha de Nacimiento *
+      <input type="date" [(ngModel)]="patient.birthDate" style="width: 100%; padding: 8px;" />
+    </label>
+
+    <label>Teléfono
+      <input [(ngModel)]="patient.phoneNumber" style="width: 100%; padding: 8px;" />
+    </label>
+
+    <label>Email
+      <input [(ngModel)]="patient.email" style="width: 100%; padding: 8px;" />
+    </label>
+
+    <div style="display: flex; gap: 10px;">
+      <button (click)="save()" [disabled]="loading" style="padding: 10px 20px; background: blue; color: white;">
+        {{ loading ? 'Guardando...' : 'Guardar' }}
+      </button>
+      <button (click)="cancel()" style="padding: 10px 20px;">Cancelar</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+@if (patient) {
+  <div style="padding: 20px; max-width: 500px;">
+    <h2>Detalle del Paciente</h2>
+    <p><strong>Tipo Documento:</strong> {{patient.documentType}}</p>
+    <p><strong>Número Documento:</strong> {{patient.documentNumber}}</p>
+    <p><strong>Nombre:</strong> {{patient.firstName}}</p>
+    <p><strong>Apellido:</strong> {{patient.lastName}}</p>
+    <p><strong>Fecha Nacimiento:</strong> {{patient.birthDate | date:'mediumDate'}}</p>
+    <p><strong>Teléfono:</strong> {{patient.phoneNumber || 'N/A'}}</p>
+    <p><strong>Email:</strong> {{patient.email || 'N/A'}}</p>
+    <p><strong>Creado:</strong> {{patient.createdAt | date:'medium'}}</p>
+    <button (click)="goBack()" style="padding: 10px 20px;">← Volver</button>
+  </div>
+} @else {
+  <div style="padding: 20px;">
+    <p>Cargando...</p>
+    <button (click)="goBack()" style="padding: 10px 20px;">← Volver</button>
+  </div>
+}

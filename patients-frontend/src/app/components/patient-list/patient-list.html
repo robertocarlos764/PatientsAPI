@@ -1,0 +1,61 @@
+<<div style="padding: 30px; max-width: 1200px; margin: 0 auto;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+    <h2>🏥 Gestión de Pacientes</h2>
+    <button (click)="goToCreate()" style="background: #27ae60; color: white; padding: 12px 20px; font-weight: bold;">
+      + Nuevo Paciente
+    </button>
+  </div>
+
+  <div style="background: white; padding: 16px; border-radius: 10px; margin-bottom: 20px; display: flex; gap: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+    <input [(ngModel)]="nameFilter" placeholder="🔍 Buscar por nombre" style="flex: 1;" />
+    <input [(ngModel)]="docFilter" placeholder="🔍 Número de documento" style="flex: 1;" />
+    <button (click)="search()" style="background: #3498db; color: white;">Buscar</button>
+    <button (click)="nameFilter=''; docFilter=''; search()" style="background: #95a5a6; color: white;">Limpiar</button>
+  </div>
+
+  <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr style="background: #2c3e50; color: white;">
+          <th style="padding: 14px 16px; text-align: left;">Documento</th>
+          <th style="padding: 14px 16px; text-align: left;">Nombre</th>
+          <th style="padding: 14px 16px; text-align: left;">Apellido</th>
+          <th style="padding: 14px 16px; text-align: left;">Email</th>
+          <th style="padding: 14px 16px; text-align: left;">Teléfono</th>
+          <th style="padding: 14px 16px; text-align: left;">Creado</th>
+          <th style="padding: 14px 16px; text-align: center;">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (p of patients; track p.patientId; let i = $index) {
+          <tr style="border-bottom: 1px solid #eee;" [style.background]="i % 2 === 0 ? '#fff' : '#f9f9f9'">
+            <td style="padding: 12px 16px;">
+              <span style="background: #3498db; color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px;">{{p.documentType}}</span>
+              {{p.documentNumber}}
+            </td>
+            <td style="padding: 12px 16px;">{{p.firstName}}</td>
+            <td style="padding: 12px 16px;">{{p.lastName}}</td>
+            <td style="padding: 12px 16px;">{{p.email || '-'}}</td>
+            <td style="padding: 12px 16px;">{{p.phoneNumber || '-'}}</td>
+            <td style="padding: 12px 16px;">{{p.createdAt | date:'dd/MM/yy HH:mm'}}</td>
+            <td style="padding: 12px 16px; text-align: center; display: flex; gap: 6px; justify-content: center;">
+              <button (click)="goToDetail(p.patientId!)" style="background: #3498db; color: white;">👁 Ver</button>
+              <button (click)="goToEdit(p.patientId!)" style="background: #f39c12; color: white;">✏️ Editar</button>
+              <button (click)="delete(p.patientId!)" style="background: #e74c3c; color: white;">🗑 Eliminar</button>
+            </td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="7" style="padding: 40px; text-align: center; color: #999;">No hay pacientes registrados</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 20px;">
+    <button (click)="prevPage()" [disabled]="page === 1" style="background: #2c3e50; color: white;">← Anterior</button>
+    <span style="font-weight: bold; color: #2c3e50;">Página {{page}} de {{Math.ceil(total/pageSize) || 1}}</span>
+    <button (click)="nextPage()" [disabled]="page * pageSize >= total" style="background: #2c3e50; color: white;">Siguiente →</button>
+  </div>
+</div>

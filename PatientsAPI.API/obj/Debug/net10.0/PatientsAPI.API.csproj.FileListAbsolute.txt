@@ -141,3 +141,4 @@ C:\Users\Fabal\Proyectos\PatientsAPI\PatientsAPI.API\obj\Debug\net10.0\refint\Pa
 C:\Users\Fabal\Proyectos\PatientsAPI\PatientsAPI.API\obj\Debug\net10.0\PatientsAPI.API.pdb
 C:\Users\Fabal\Proyectos\PatientsAPI\PatientsAPI.API\obj\Debug\net10.0\PatientsAPI.API.genruntimeconfig.cache
 C:\Users\Fabal\Proyectos\PatientsAPI\PatientsAPI.API\obj\Debug\net10.0\ref\PatientsAPI.API.dll
+C:\Users\Fabal\Proyectos\PatientsAPI\PatientsAPI.API\obj\Debug\net10.0\PatientsAPI.API.sourcelink.json

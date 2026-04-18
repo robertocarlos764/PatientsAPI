@@ -26,7 +26,7 @@ API RESTful para gestión de pacientes construida con .NET 10 y SQL Server.
 cd PatientsAPI.API
 dotnet run
 ```
-La API estará disponible en `http://localhost:5271/swagger`
+La API estará disponible en ` http://localhost:5271`
 
 ## Endpoints
 | Método | Ruta | Descripción |
