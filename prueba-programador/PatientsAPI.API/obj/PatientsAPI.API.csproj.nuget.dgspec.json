@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fabal\\Proyectos\\PatientsAPI\\PatientsAPI.API\\PatientsAPI.API.csproj": {}
+    "C:\\Users\\Fabal\\Proyectos\\PatientsAPI\\prueba-programador\\PatientsAPI.API\\PatientsAPI.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fabal\\Proyectos\\PatientsAPI\\PatientsAPI.API\\PatientsAPI.API.csproj": {
+    "C:\\Users\\Fabal\\Proyectos\\PatientsAPI\\prueba-programador\\PatientsAPI.API\\PatientsAPI.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fabal\\Proyectos\\PatientsAPI\\PatientsAPI.API\\PatientsAPI.API.csproj",
+        "projectUniqueName": "C:\\Users\\Fabal\\Proyectos\\PatientsAPI\\prueba-programador\\PatientsAPI.API\\PatientsAPI.API.csproj",
         "projectName": "PatientsAPI.API",
-        "projectPath": "C:\\Users\\Fabal\\Proyectos\\PatientsAPI\\PatientsAPI.API\\PatientsAPI.API.csproj",
+        "projectPath": "C:\\Users\\Fabal\\Proyectos\\PatientsAPI\\prueba-programador\\PatientsAPI.API\\PatientsAPI.API.csproj",
         "packagesPath": "C:\\Users\\Fabal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fabal\\Proyectos\\PatientsAPI\\PatientsAPI.API\\obj\\",
+        "outputPath": "C:\\Users\\Fabal\\Proyectos\\PatientsAPI\\prueba-programador\\PatientsAPI.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Fabal\\AppData\\Roaming\\NuGet\\NuGet.Config"
