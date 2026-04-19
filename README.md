@@ -4,20 +4,20 @@ Este repositorio contiene las pruebas técnicas solicitadas.
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 PatientsAPI/
 ├── prueba-programador/
-│   ├── PatientsAPI.API/        → Backend .NET
-│   ├── PatientsAPI.Tests/      → Pruebas unitarias
-│   └── patients-frontend/      → Frontend Angular
-├── database/
-│   └── ClinicaDB.sql           → Prueba Base de Datos
+│   ├── PatientsAPI.API/        - Backend .NET
+│   ├── PatientsAPI.Tests/      - Pruebas unitarias
+│   └── patients-frontend/      - Frontend Angular
+├── prueba-base-de-datos/
+│   └── ClinicaDB.sql           - Prueba Base de Datos
 └── README.md
 
 ---
 
-## 1️⃣ Prueba Backend — .NET Core + SQL Server
+## Prueba Backend - .NET Core + SQL Server
 
 ### Tecnologías
 - .NET 10
@@ -34,8 +34,8 @@ dotnet run
 ### Base de datos
 1. Abrir SSMS
 2. Conectarse a localhost
-3. Ejecutar el script database/PatientsDB.sql
-4. Verificar cadena de conexión en appsettings.json:
+3. Crear la base de datos PatientsDB
+4. Verificar cadena de conexión en appsettings.json
 
 "ConnectionStrings": {
   "DefaultConnection": "Server=localhost;Database=PatientsDB;Trusted_Connection=True;TrustServerCertificate=True;"
@@ -59,7 +59,7 @@ dotnet test
 
 ---
 
-## 2️⃣ Prueba Frontend — Angular
+## Prueba Frontend - Angular
 
 ### Tecnologías
 - Angular 21
@@ -75,18 +75,18 @@ ng serve --proxy-config proxy.conf.json --port 4200
 http://localhost:4200/patients
 
 ### Funcionalidades
-- ✅ Listado paginado y filtrable
-- ✅ Crear paciente
-- ✅ Editar paciente
-- ✅ Ver detalle
-- ✅ Eliminar paciente
+- Listado paginado y filtrable
+- Crear paciente
+- Editar paciente
+- Ver detalle
+- Eliminar paciente
 
 ---
 
-## 3️⃣ Prueba Base de Datos — SQL Server
+## Prueba Base de Datos - SQL Server
 
 ### Ubicación
-database/ClinicaDB.sql
+prueba-base-de-datos/ClinicaDB.sql
 
 ### Instalación
 1. Abrir SSMS
@@ -94,15 +94,15 @@ database/ClinicaDB.sql
 3. Ejecutar el script ClinicaDB.sql
 
 ### Contenido
-- ✅ 3 tablas: Pacientes, Medicos, Consultas
-- ✅ Datos de prueba
-- ✅ 5 consultas SQL
-- ✅ 2 procedimientos almacenados
-- ✅ 1 función escalar
-- ✅ 5 índices de optimización
+- 3 tablas: Pacientes, Medicos, Consultas
+- Datos de prueba
+- 5 consultas SQL
+- 2 procedimientos almacenados
+- 1 función escalar
+- 5 índices de optimización
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 Roberto Carlos
 Repositorio: https://github.com/robertocarlos764/PatientsAPI
